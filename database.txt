@@ -1,0 +1,6 @@
+﻿CREATE TABLE zoo_animals (
+id serial NOT NULL,
+animal varchar(100) NOT NULL,
+number integer NOT NULL,
+CONSTRAINT zoo_animals_pkey PRIMARY KEY (id)
+);
