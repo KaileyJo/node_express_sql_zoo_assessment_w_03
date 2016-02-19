@@ -21,7 +21,7 @@ function postAnimal() {
         values[field.name] = field.value;
     });
 
-    values.number = getRandom();
+    values.number = randomNumber(1, 100);
 
     $.ajax({
         type: 'POST',
@@ -48,7 +48,6 @@ function appendAnimal(info) {
     }
 }
 
-function getRandom() {
-    function randomNumber(min, max){ return Math.floor(Math.random() * (1 + max - min) + min); }
-    return randomNumber(1, 100);
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (1 + max - min) + min);
 }
