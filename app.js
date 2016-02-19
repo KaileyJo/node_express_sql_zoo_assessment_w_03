@@ -2,12 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
-//var randomAnimal = require('./routes/route');
-
-app.get('/random', function(req, res) {
-    function randomNumber(min, max){ return Math.floor(Math.random() * (1 + max - min) + min); }
-    res.send(randomNumber(1, 100));
-});
 
 var pg = require('pg');
 var connectionString = '';

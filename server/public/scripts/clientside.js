@@ -20,12 +20,8 @@ function postAnimal() {
     $.each($('#zooForm').serializeArray(), function(i, field) {
         values[field.name] = field.value;
     });
-    console.log(numberAnimals());
-    //values.number = getRandom();
-    values.number = numberAnimals();
-    console.log(values.number);
 
-    console.log(values);
+    values.number = getRandom();
 
     $.ajax({
         type: 'POST',
@@ -38,16 +34,6 @@ function postAnimal() {
             } else {
                 console.log('error');
             }
-        }
-    });
-}
-
-function numberAnimals() {
-    $.ajax({
-        type: 'GET',
-        url: '/random',
-        success: function(data) {
-            console.log(data);
         }
     });
 }
