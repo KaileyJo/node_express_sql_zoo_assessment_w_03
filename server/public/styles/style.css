@@ -1,0 +1,23 @@
+body {
+    margin: auto;
+    padding: 20px;
+}
+
+div {
+    background-color: rgba(98, 155, 241, 0.45);
+    display: inline;
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    border: 2px dashed rgba(98, 155, 241, 0.45);
+    border-radius: 5px;
+}
+
+.new-animal {
+    width: 300px;
+}
+
+h1, h3, h4, form {
+    margin: 10px auto;
+    text-align: center;
+}

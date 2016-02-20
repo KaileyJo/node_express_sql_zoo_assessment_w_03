@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+var randomAnimal = require('./routes/route');
 
 var pg = require('pg');
 var connectionString = '';
@@ -37,7 +38,7 @@ app.get('/zoo_animals', function(req, res) {
 app.post('/zoo_animals', function(req, res) {
     var addAnimal = {
         animal: req.body.animal,
-        number: req.body.number
+        number: randomAnimal(1, 100)
     };
 
     pg.connect(connectionString, function(err, client, done) {
